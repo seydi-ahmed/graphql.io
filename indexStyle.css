@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(17, 117, 117);
+    padding: 20px;
+    }
+    
+    .login-box {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 34%;
+    position: absolute;
+    left: 28%;
+    top: 28%;
+    }
+    
+    .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+    .login-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+    .login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    }
+    
+    .login-button:hover {
+    background-color: #45a049;
+    }
+
+span {
+    margin-top: 2vh;
+    font-size: large;
+    font-weight: bold;
+    color: antiquewhite;
+}
+#barchart_values {
+    margin-top: 8%;
+}
+#donutchart{
+    position: absolute;
+    left: 51%;
+    bottom: -57%;
+    top: 36%;
+}
+#exit:hover{
+    cursor: pointer;
+}
