@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(17, 117, 117);
     padding: 20px;
     }
     
@@ -42,7 +42,6 @@ body {
     .login-button:hover {
     background-color: #45a049;
     }
-
 span {
     margin-top: 2vh;
     font-size: large;
