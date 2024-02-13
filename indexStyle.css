@@ -1,63 +1,70 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(7, 7, 7);
+    background-color: #070707;
     padding: 20px;
-    }
-    
-    .login-box {
+}
+
+.login-box {
     background-color: #fff;
     padding: 30px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 34%;
-    position: absolute;
-    left: 28%;
-    top: 28%;
-    }
-    
-    .login-title {
+    width: 400px; /* Réglage de la largeur pour plus de cohérence */
+    max-width: 80%; /* Réglage de la largeur maximale */
+    margin: auto; /* Centrage horizontale */
+    position: relative; /* Changer en relative pour les éléments internes */
+    top: 50px; /* Décalage vers le haut */
+}
+
+.login-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
-    }
-    
-    .login-input {
+}
+
+.login-input {
     display: block;
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Augmentation de la marge pour plus d'espace */
     border: 1px solid #ccc;
     box-sizing: border-box;
-    }
-    
-    .login-button {
+}
+
+.login-button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    }
-    
-    .login-button:hover {
+    width: 100%; /* Pleine largeur */
+    display: block;
+    text-align: center;
+}
+
+.login-button:hover {
     background-color: #45a049;
-    }
+}
 
 span {
-    margin-top: 2vh;
-    font-size: large;
+    margin-top: 20px; /* Ajustement de la marge pour plus d'espace */
+    font-size: 18px; /* Réduction de la taille de la police */
     font-weight: bold;
-    color: antiquewhite;
+    color: #f5f5f5; /* Couleur plus claire */
 }
+
 #barchart_values {
     margin-top: 8%;
 }
-#donutchart{
+
+#donutchart {
     position: absolute;
-    left: 51%;
-    bottom: -57%;
-    top: 36%;
+    left: 50%;
+    transform: translateX(-50%); /* Centrage horizontal */
+    bottom: 10%; /* Réglage de la position verticale */
 }
-#exit:hover{
+
+#exit:hover {
     cursor: pointer;
 }
