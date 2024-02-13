@@ -61,3 +61,13 @@ span {
 #exit:hover{
     cursor: pointer;
 }
+#bar_chart {
+    margin-top: 8%;
+}
+
+#donut_chart {
+    margin-top: 8%; /* Vous pouvez ajuster cette valeur selon vos besoins */
+    margin-left: 51%; /* Assurez-vous que ce décalage est suffisant pour éviter le chevauchement */
+    width: 900px;
+    height: 500px;
+}
