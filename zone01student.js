@@ -162,60 +162,59 @@ export function buildHTMLElements(data, cred) {
     firstGraphElement.classList.add('barGraphContent');
     firstGraphElement.innerHTML = `
     <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Project", "XP", { role: "style" }],
+            ${xpArr[0]},
+            ${xpArr[1]},
+            ${xpArr[2]},
+            ${xpArr[3]},
+            ${xpArr[4]},
+            ${xpArr[5]},
+            ${xpArr[6]},
+            ${xpArr[7]},
+            ${xpArr[8]},
+            ${xpArr[9]}
+            
+        ]);
+
+        var options = {
+            title: "Your last ten projects with the most XP",
+            width: 900,
+            height: 400,
+            bar: { groupWidth: "55%" },
+            legend: { position: "none" },
+        };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+<div id="barchart_values""></div>
+    `
+    secondGraphElement.innerHTML = `
+      <script type="text/javascript">
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ["Project", "XP", { role: "style" }],
-                ${xpArr[0]},
-                ${xpArr[1]},
-                ${xpArr[2]},
-                ${xpArr[3]},
-                ${xpArr[4]},
-                ${xpArr[5]},
-                ${xpArr[6]},
-                ${xpArr[7]},
-                ${xpArr[8]},
-                ${xpArr[9]}
-            ]);
-
-            var options = {
-                title: "Your last ten projects with the most XP",
-                width: 900,
-                height: 400,
-                bar: { groupWidth: "55%" },
-                legend: { position: "none" },
-            };
-            var chart = new google.visualization.BarChart(document.getElementById("bar_chart"));
-            chart.draw(data, options);
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Done',  ${auditDone}],
+            ['Received',    ${auditReceived}]
+          ]);
+  
+          var options = {
+            title: 'Your audits ratios',
+            pieHole: 0.4,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+          chart.draw(data, options);
         }
-    </script>
-    <div id="bar_chart"></div>
-`;
-
-secondGraphElement.innerHTML = `
-    <script type="text/javascript">
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Done',  ${auditDone}],
-                ['Received',    ${auditReceived}]
-            ]);
-
-            var options = {
-                title: 'Your audits ratios',
-                pieHole: 0.4,
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('donut_chart'));
-            chart.draw(data, options);
-        }
-    </script>
-    <div id="donut_chart" style="width: 900px; height: 500px;"></div>
-`;
-
+      </script>
+      <div id="donutchart" style="width: 900px; height: 500px;"></div>
+    `
     main.appendChild(userInfosElement);
     main.appendChild(firstGraphElement);
     main.appendChild(secondGraphElement);
