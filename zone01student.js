@@ -88,16 +88,16 @@ export function buildHTMLElements(data, cred) {
     const auditDone =  data.audits[0].totalUp/(data.audits[0].totalUp+data.audits[0].totalDown)
     const auditReceived =  data.audits[0].totalDown/(data.audits[0].totalUp+data.audits[0].totalDown)
 
-    xpArr[0].push("#b87333")
-    xpArr[1].push("#00FF00")
-    xpArr[2].push("gold")
-    xpArr[3].push("color: #00FFFF")
-    xpArr[4].push("#FF00FF")
-    xpArr[5].push("#ba4a00")
-    xpArr[6].push("#8e44ad")
-    xpArr[7].push("green")
-    xpArr[8].push("red")
-    xpArr[9].push("black")
+    xpArr[0].push("#3498db"); // Dodger Blue
+    xpArr[1].push("#2ecc71"); // Emerald
+    xpArr[2].push("#f39c12"); // Orange
+    xpArr[3].push("#1abc9c"); // Turquoise
+    xpArr[4].push("#34495e"); // Wet Asphalt
+    xpArr[5].push("#e74c3c"); // Alizarin
+    xpArr[6].push("#9b59b6"); // Amethyst
+    xpArr[7].push("#27ae60"); // Nephritis
+    xpArr[8].push("#e67e22"); // Carrot
+    xpArr[9].push("#f1c40f"); // Sunflower
     console.log('xpssss: ', xpArr)
     const main = document.createElement('div');
     main.classList.add('content');
