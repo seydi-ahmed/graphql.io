@@ -6,9 +6,9 @@ export function userLogin() {
     const mainLogin = document.createElement('div');
     mainLogin.classList.add('login-box');
     mainLogin.innerHTML = `
-        <h1 class="login-title">Login to Zone O1 Dakar</h1>
+        <h1 class="login-title">Login</h1>
         <form id="credForm">
-            <input class="login-input" type="text" placeholder="Username" required><br>
+            <input class="login-input" type="text" placeholder="Username or E-mail" required><br>
             <input class="login-input" type="password" placeholder="Password" required><br>
             <button class="login-button" type="submit">Log In</button>
         </form>
