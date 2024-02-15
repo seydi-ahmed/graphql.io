@@ -9,7 +9,7 @@ export function donutGraph(auditDone, auditReceived) {
         ]);
 
         var options = {
-            title: 'Your audits ratios' + auditReceived/auditDone,
+            title: 'Your audits ratios ' + (auditDone/auditReceived).toFixed(1),
             pieHole: 0.4,
         };
 
